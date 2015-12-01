@@ -16,7 +16,7 @@
         },
         "branch": {
             "type": "string",
-            "defaultValue": "master"
+            "defaultValue": "x64"
         }
     },
     "resources": [
@@ -43,7 +43,7 @@
             "resources": [
                 {
                     "apiVersion": "2015-08-01",
-                    "name": "PHP7Extension",
+                    "name": "PHP7Extension64",
                     "type": "siteextensions",
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
@@ -56,7 +56,7 @@
                     "type": "sourcecontrols",
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]",
-                        "[resourceId('Microsoft.Web/Sites/siteextensions', parameters('siteName'), 'PHP7Extension')]"
+                        "[resourceId('Microsoft.Web/Sites/siteextensions', parameters('siteName'), 'PHP7Extension64')]"
                     ],
                     "properties": {
                         "RepoUrl": "[parameters('repoUrl')]",
